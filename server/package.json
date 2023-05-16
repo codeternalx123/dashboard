@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "build": "webpack",
     "start": "node index.js",
@@ -26,7 +29,7 @@
     "nodemon": "^2.0.20"
   },
   "webpack": {
-    "config": "./webpack.config.js"
+    "config": "./webpack.config.mjs"
   },
   "devDependencies": {
     "webpack": "^5.28.0",
