@@ -29,7 +29,7 @@
     "nodemon": "^2.0.20"
   },
   "webpack": {
-    "config": "./webpack.config.js"
+    "config": "./webpack.config.cjs"
   },
   "devDependencies": {
     "webpack": "^5.28.0",
