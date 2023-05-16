@@ -25,6 +25,9 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20"
   },
+  "webpack": {
+    "config": "./webpack.config.js"
+  },
   "devDependencies": {
     "webpack": "^5.28.0",
     "webpack-cli": "^4.10.0"
