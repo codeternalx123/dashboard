@@ -7,5 +7,8 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   mode: 'production'
 };
