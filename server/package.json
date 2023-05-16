@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^2.0.0",
-    "async_hooks": "^1.0.0",
+    "bluebird": "^3.7.2",
     "body-parser": "^1.20.1",
     "browserify-zlib": "^0.2.0",
     "cors": "^2.8.5",

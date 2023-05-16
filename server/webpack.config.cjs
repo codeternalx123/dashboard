@@ -1,4 +1,5 @@
 const path = require('path');
+const Promise = require('bluebird/js/browser/bluebird.js');
 
 module.exports = {
   entry: './index.js',
@@ -8,9 +9,6 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    alias: {
-      async_hooks: 'async_hooks/browser.js'
-    },
     fallback: {
       zlib: require.resolve('browserify-zlib'),
       querystring: require.resolve('querystring-es3'),
@@ -23,8 +21,7 @@ module.exports = {
       "os": require.resolve("os-browserify/browser"),
       "http": require.resolve("stream-http"),
       "net": require.resolve("net"),
-      "url": require.resolve("url"),
-      "async_hooks": require.resolve("async_hooks")
+      "url": require.resolve("url")
     },
     extensions: ['.js', '.jsx', '.json'],
   },
