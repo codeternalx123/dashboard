@@ -15,8 +15,18 @@ module.exports = {
       crypto: require.resolve('crypto-browserify'),
       fs: false,
       stream: require.resolve('stream-browserify'),
+      assert: require.resolve('assert/'),
+      "util": require.resolve("util"),
+      "os": require.resolve("os-browserify/browser"),
+      "http": require.resolve("stream-http"),
+      "net": require.resolve("net"),
+      "url": require.resolve("url"),
+      "async_hooks": require.resolve("async_hooks")
     },
     extensions: ['.js', '.jsx', '.json'],
+  },
+  stats: {
+    errorDetails: true
   },
   mode: 'production'
 };
