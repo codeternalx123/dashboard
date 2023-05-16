@@ -8,6 +8,9 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
+    alias: {
+      async_hooks: 'async_hooks/browser.js'
+    },
     fallback: {
       zlib: require.resolve('browserify-zlib'),
       querystring: require.resolve('querystring-es3'),
