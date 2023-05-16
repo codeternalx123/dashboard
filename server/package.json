@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "assert": "^2.0.0",
     "async_hooks": "^1.0.0",
     "body-parser": "^1.20.1",
     "browserify-zlib": "^0.2.0",
@@ -29,10 +30,15 @@
     "jest": "^27.2.5",
     "mongoose": "^6.7.3",
     "morgan": "^1.10.0",
+    "net": "^1.0.2",
     "nodemon": "^2.0.20",
+    "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "querystring-es3": "^0.2.1",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
   },
   "webpack": {
     "config": "./webpack.config.cjs"
