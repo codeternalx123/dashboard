@@ -20,7 +20,8 @@ module.exports = {
       os: require.resolve('os-browserify/browser'),
       http: require.resolve('stream-http'),
       net: require.resolve('net'),
-      url: require.resolve('url')
+      url: require.resolve('url'),
+      async_hooks: false
     },
     extensions: ['.js', '.jsx', '.json'],
   },
