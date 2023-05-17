@@ -1,11 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  entry: {
+    main: './index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     fallback: {
@@ -21,12 +23,23 @@ module.exports = {
       http: require.resolve('stream-http'),
       net: require.resolve('net'),
       url: require.resolve('url'),
-      async_hooks: false
+      async_hooks: false,
     },
     extensions: ['.js', '.jsx', '.json'],
   },
   stats: {
-    errorDetails: true
+    errorDetails: true,
   },
-  mode: 'production'
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
+  mode: 'production',
 };
