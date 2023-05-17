@@ -1,5 +1,4 @@
 const path = require('path');
-const Promise = require('bluebird/js/browser/bluebird.js');
 
 module.exports = {
   entry: './index.js',
@@ -17,11 +16,11 @@ module.exports = {
       fs: false,
       stream: require.resolve('stream-browserify'),
       assert: require.resolve('assert/'),
-      "util": require.resolve("util"),
-      "os": require.resolve("os-browserify/browser"),
-      "http": require.resolve("stream-http"),
-      "net": require.resolve("net"),
-      "url": require.resolve("url")
+      util: require.resolve('util'),
+      os: require.resolve('os-browserify/browser'),
+      http: require.resolve('stream-http'),
+      net: require.resolve('net'),
+      url: require.resolve('url')
     },
     extensions: ['.js', '.jsx', '.json'],
   },
