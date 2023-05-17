@@ -1,4 +1,5 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -31,12 +32,14 @@ module.exports = {
     errorDetails: true,
   },
   optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
     splitChunks: {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          enforce:true,
+          enforce: true,
           chunks: 'all',
         },
       },
